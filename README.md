@@ -7,7 +7,8 @@ Read for further info: https://github.com/ThingsNStuffYouKnow/BBCF-RCE-PoC
 # Vulnerability
 ![function_bbtag](https://user-images.githubusercontent.com/109482766/179823888-22fe22b0-5d46-4232-b522-30d77d60b6c9.png)\
 
-Same vulnerability as recently fixed in BlazBlue: Central Fiction, class containing the vulnerable function is called "Udp" in BBTAG.
+Same vulnerability as recently fixed in BlazBlue: Central Fiction, class containing the vulnerable function is called "Udp" in BBTAG.\
+BBTAG.exe is compiled without ASLR and stack canaries.
 
 # PoC
 The PoC uses the overflow to jump into a ROP chain, which allocates executable memory and stores some shellcode to start calc.exe.\
